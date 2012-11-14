@@ -1,6 +1,6 @@
 # Docushin
 
-TODO: Write a gem description
+Docushin creates documentation based on your rails application routes. It is useful for generating docs on a build API.
 
 ## Installation
 

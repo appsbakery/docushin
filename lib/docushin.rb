@@ -1,5 +1,7 @@
 require "docushin/version"
 
 module Docushin
-  # Your code goes here...
+  def self.version_string
+    "Docushin version #{Docushin::VERSION}"
+  end
 end

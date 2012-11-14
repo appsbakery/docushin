@@ -2,11 +2,12 @@
 require File.expand_path('../lib/docushin/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Todor Grudev"]
-  gem.email         = ["tagrudev@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Todor Grudev", "Alex Ganov"]
+  gem.email         = ["tagrudev@gmail.com", "aganov@gmail.com"]
+  gem.description   = %q{Builds documentation based on your Ruby on Rails application routes}
+  gem.summary       = %q{Useful for generating docs on a build API.}
+  gem.homepage    = "http://github.com/appsbakery/docushin"
+
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -14,4 +15,8 @@ Gem::Specification.new do |gem|
   gem.name          = "docushin"
   gem.require_paths = ["lib"]
   gem.version       = Docushin::VERSION
+
+  gem.add_development_dependency "pry"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec", "~> 2.0"
 end
