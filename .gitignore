@@ -3,6 +3,7 @@
 .bundle
 .config
 .yardoc
+.redcar
 Gemfile.lock
 InstalledFiles
 _yardoc

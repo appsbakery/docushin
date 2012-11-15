@@ -10,15 +10,13 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install docushin
+    $ bundle install
 
 ## Usage
 
-TODO: Write usage instructions here
+Mount engine in your application `config/routes.rb`
+
+    mount Docushin::Engine, :at => "doc"
 
 ## Contributing
 
