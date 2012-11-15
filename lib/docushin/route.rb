@@ -13,7 +13,7 @@ module Docushin
     def initialize(route)
       @base = File.join(Rails.root, 'doc', 'docushin')
       @name = route.name
-      @verb = route.verb.source.gsub(/[$^]/, '')
+      @verb = route.verb.source.gsub(/[$^]/, '').empty? ? "MATCH" : route.verb.source.gsub(/[$^]/, '')
       @path = route.path.spec.to_s.sub('(.:format)', '')
       @requirements = route.requirements
       @file_name = Digest::MD5.hexdigest(@verb.to_s + @path) + '.md'

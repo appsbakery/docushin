@@ -14,8 +14,6 @@ module Docushin
             @routes << Route.new(rack_route)
           end
         end
-
-        next if route.verb.source.empty?
         @routes << Route.new(route)
       end
     end

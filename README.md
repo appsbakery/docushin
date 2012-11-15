@@ -18,6 +18,9 @@ Mount engine in your application `config/routes.rb`
 
     mount Docushin::Engine, :at => "doc"
 
+You can specify, the name of the route you want Docushin to be mountet at, just change "doc"
+to your desired destination.
+
 ## Contributing
 
 1. Fork it
