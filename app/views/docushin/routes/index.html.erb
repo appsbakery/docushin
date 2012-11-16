@@ -1,5 +1,5 @@
 <% @routes_collection.routes.group_by{ |r| r.controller }.each do |controller, routes| %>
-<h2><%= controller.gsub("/", "::").humanize %></h2>
+<h2><%= controller.titleize %></h2>
 <table>
   <thead>
     <tr>
