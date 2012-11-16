@@ -26,5 +26,11 @@ module Docushin
         app
       end
     end
+
+    def find_by_filename_hash(hash)
+      @routes.each do |route|
+        return route if route.file_name == "#{hash}"
+      end
+    end
   end
 end

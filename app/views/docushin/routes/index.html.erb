@@ -1,5 +1,25 @@
-<% @routes_collection.routes.each do |route| %>
-  <strong><%= route.verb %></strong>
-  <%= route.path %>
-  <br />
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @routes_collection.routes.each do |route| %>
+       <tr>
+          <td class="resource">
+            <%= link_to route.verb + " " + route.path, route_path(:id => generate_name(route.verb, route.path)) %>
+          </td>
+          <td>
+            <% if file_exists?(route.verb, route.path) %>
+              <%= route.description %>
+              <%= link_to 'Update', edit_route_path(generate_name(route.verb, route.path))%>
+            <% else %>
+              <%= link_to 'Create a description', edit_route_path(generate_name(route.verb, route.path))%>
+            <% end %>
+          </td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>

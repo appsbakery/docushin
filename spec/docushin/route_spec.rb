@@ -12,14 +12,16 @@ describe Docushin::Route do
       route.should respond_to(:requirements)
       route.should respond_to(:base)
       route.should respond_to(:data)
+      route.should respond_to(:file_name)
       route.should respond_to(:content)
+      route.should respond_to(:description)
     end
   end
 
   describe 'inspect the new Route' do 
     it 'should have attr defined' do 
       route.base.should == File.join(Rails.root, 'doc', 'docushin')
-      route.instance_variable_get(:@file_name).should == Digest::MD5.hexdigest(route.verb.to_s + route.path) + '.md'
+      route.file_name.should == Digest::MD5.hexdigest(route.verb.to_s + route.path) 
       route.name.should == "foo_index"
       route.path.should == "/foo"
       route.requirements.should == {:action=>"index", :controller=>"foo"}
@@ -29,8 +31,8 @@ describe Docushin::Route do
 
   describe 'read markdown file' do
     it 'should generate data and content' do 
-      binding.pry
-      route.data.should == {"tags"=>["Awesome"]}
+      route.data.should == {"description"=>"I am so awesome"}
+      route.description.should == "I am so awesome"
       route.content.should == "{\"id\":\"4f3a296ac8de6732fe000003\",\"first_name\":\"Todor\",\"last_name\":\"Grudev\",\"username\":null,\"bio\":null,\"gender\":\"male\",\"email\":\"tagrudev@gmail.com\"}"
     end
   end

@@ -1,0 +1,24 @@
+<h3 id="title"><%= @route.verb + " " + @route.path %></h3>
+<%= form_for(@route) do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :description %>
+      </td>
+      <td>
+        <%= f.text_field :description %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :content %> 
+      </td>
+      <td>
+        <%= f.text_area(:content, :cols => 50, :rows => 20) %>
+      </td>
+    </tr>
+  </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

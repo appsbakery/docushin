@@ -1,0 +1,7 @@
+<h1 id="title"><%= @route.verb + " " + @route.path %></h1>
+<h3>Route url</h3>
+<%= File.join(request.protocol, request.host, @route.path) %>
+<h3>Description</h3>
+<%= @route.description %>
+<h3>Content</h3>
+<%= @route.content %>
