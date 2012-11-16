@@ -1,6 +1,6 @@
 # Docushin
 
-Docushin creates documentation based on your rails application routes. It is useful for generating docs on a build API.
+Docushin creates documentation based on your rails application routes. 
 
 ## Installation
 
@@ -16,10 +16,10 @@ And then execute:
 
 Mount engine in your application `config/routes.rb`
 
-    mount Docushin::Engine, :at => "doc"
+    mount Docushin::Engine, :at => "docushin"
 
-You can specify, the name of the route you want Docushin to be mountet at, just change "doc"
-to your desired destination.
+You can specify, the name of the route you want Docushin to be mountet at, just change "docushin"
+to your desired destination. It creates a resource on "yousitename/docushin/routes".
 
 ## Contributing
 

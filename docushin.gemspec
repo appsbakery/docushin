@@ -4,8 +4,8 @@ require File.expand_path('../lib/docushin/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Todor Grudev", "Alex Ganov"]
   gem.email         = ["tagrudev@gmail.com", "aganov@gmail.com"]
-  gem.description   = %q{Builds documentation based on your Ruby on Rails application routes}
-  gem.summary       = %q{Useful for generating docs on a build API.}
+  gem.description   = %q{Builds documentation based on your Ruby on Rails application routes.}
+  gem.summary       = %q{Useful for generating docs on your routes.}
   gem.homepage    = "http://github.com/appsbakery/docushin"
 
 
