@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Routes</title>
+  <style>
+    body { background-color: #fff; color: #333; margin: 0px; }
+
+    body, p, ol, ul, td {
+      font-family: helvetica, verdana, arial, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+    #container {
+      width: 960px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+    #header-outer {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      height: 40px;
+      z-index: 999;
+      -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25),0 -1px 0 rgba(0,0,0,0.1) inset;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+      background: #00A0D1 repeat-x 0 0;
+    }
+    #header {
+      width: 960px;
+      margin: 0 auto;
+    }
+    #logo {
+      float: left;
+      padding-left: 32px;
+      display: block;
+      height: 40px;
+      color: white;
+      font-size: 150%;
+      font-weight: 200;
+      line-height: 38px;
+    }
+    h1 {
+      font-size: 3em;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 0.75em;
+    }
+    table {
+      margin: 0 0 3em 0;
+      width: 100%;
+    }
+    tr:hover td, tr:hover td.active {
+      background: #F8F8F8;
+    }
+    td {
+      padding: 8px 0 8px 0;
+      vertical-align: top;
+      background: white;
+    }
+    th {
+      text-align: left;
+      border-bottom: 1px solid #EEE;
+    }
+    td.resource {
+      width: 320px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+      white-space: pre-wrap;
+    }
+
+    a {
+      text-decoration: none; 
+      color: #0080A6; }
+    a:visited { color: #0080A6; }
+    a:hover {
+      text-decoration: underline;
+      color: #0080A6;
+    }
+    a.logo{
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-outer">
+    <div id="header">
+      <div id="logo"><%= link_to "Docushin", routes_path, :class => "logo" %></div>
+    </div>    
+  </div>
+  <div id="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

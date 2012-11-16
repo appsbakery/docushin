@@ -1,5 +1,5 @@
 class Docushin::RoutesController < ActionController::Base
-  layout 'default'
+  layout 'docushin'
   before_filter :load_route_set
 
   def index
