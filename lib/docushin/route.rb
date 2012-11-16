@@ -9,6 +9,7 @@ module Docushin
     attr_accessor :name
     attr_accessor :verb
     attr_accessor :path
+    attr_accessor :controller
     attr_accessor :requirements
     attr_accessor :base
     attr_accessor :data
@@ -17,6 +18,7 @@ module Docushin
     attr_accessor :description
     
     def initialize(route)
+      @controller = route.defaults[:controller]
       @base = File.join(Rails.root, 'doc', 'docushin')
       @name = route.name
       @verb = route.verb.source.empty? ? "MATCH" : route.verb.source.gsub(/[$^]/, '')

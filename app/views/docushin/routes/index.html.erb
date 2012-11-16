@@ -1,3 +1,5 @@
+<% @routes_collection.routes.group_by{ |r| r.controller }.each do |controller, routes| %>
+<h2><%= controller.gsub("/", "::").humanize %></h2>
 <table>
   <thead>
     <tr>
@@ -5,8 +7,8 @@
       <th>Description</th>
     </tr>
   </thead>
-  <tbody>
-    <% @routes_collection.routes.each do |route| %>
+  <tbody>       
+    <% routes.each do |route|%>     
        <tr>
           <td class="resource">
             <%= link_to route.verb + " " + route.path, route_path(:id => generate_name(route.verb, route.path)) %>
@@ -23,3 +25,4 @@
     <% end %>
   </tbody>
 </table>
+<% end %>
