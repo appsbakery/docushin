@@ -1,5 +1,5 @@
 <% @routes_collection.routes.group_by{ |r| r.controller }.each do |controller, routes| %>
-<h2><%= controller.titleize %></h2>
+<h2><%= controller.titleize.gsub("/", "::") %></h2>
 <table>
   <thead>
     <tr>
@@ -11,7 +11,7 @@
     <% routes.each do |route|%>     
        <tr>
           <td class="resource">
-            <%= link_to route.verb + " " + route.path, route_path(:id => generate_name(route.verb, route.path)) %>
+            <span class="label"><%= route.verb %></span> <%= link_to route.path, route_path(:id => generate_name(route.verb, route.path)) %>
           </td>
           <td>
             <% if file_exists?(route.verb, route.path) %>
