@@ -11,13 +11,19 @@ module Docushin
 
         if (rack_app = discover_rack_app(route.app)) && rack_app.respond_to?(:routes)
           rack_app.routes.routes.each do |rack_route|
-            docushin_route = Route.new(rack_route)
-            @routes << docushin_route if docushin_route.path.match(Docushin.path_regexp)
+            add_route Route.new(rack_route)
           end
         end
         
-        docushin_route = Route.new(route)
-        @routes << docushin_route if docushin_route.path.match(Docushin.path_regexp)
+        add_route Route.new(route)
+      end
+    end
+    
+    def add_route(route)
+      if Docushin.path_regexp.nil?
+        @routes << route
+      else
+        @routes << route if route.path.match(Docushin.path_regexp)
       end
     end
 
