@@ -1,5 +1,5 @@
 <h1 id="title"><%= @route.verb + " " + @route.path %></h1>
-<p><pre><%= File.join(request.protocol, request.host, @route.path) %></pre></p>
+<p><pre class="route-url"><%= File.join(request.protocol, request.host, @route.path) %></pre></p>
 <%= @route.description %>
 <div class="markdown"><%= @route.content %></div>
 <script>

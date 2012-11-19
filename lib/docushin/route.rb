@@ -27,7 +27,7 @@ module Docushin
       @path = route.path.spec.to_s.sub('(.:format)', '')
       @requirements = route.requirements
       @file_name = Digest::MD5.hexdigest(@verb.to_s + @path)
-      rtfm(@base, @file_name) if File.exists?(File.join(@base, @file_name)  + '.md')
+      self.load
     end
 
     def description
@@ -68,17 +68,17 @@ module Docushin
     end
 
     # Read route's documentation
-    def rtfm(base, name)
-      @content = File.read(File.join(base, name) + '.md')
-
+    def load
       begin
+        @content = File.read(File.join(@base, "#{@file_name}.md"))
         if @content =~ /^(---\s*\n.*?\n?)^(---\s*$\n?)/m
           @content = $'
           @data = YAML.load($1)
         end
       rescue => e
-        # puts "Exception reading #{name}: #{e.message}"
+        # Do nothing
       end
+
       @data ||= {}
     end
   end
