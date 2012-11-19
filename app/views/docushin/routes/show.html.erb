@@ -1,13 +1,12 @@
 <h1 id="title"><%= @route.verb + " " + @route.path %></h1>
-<h3>Route url</h3>
-<%= File.join(request.protocol, request.host, @route.path) %>
-<h3>Description</h3>
+<p><pre><%= File.join(request.protocol, request.host, @route.path) %></pre></p>
 <%= @route.description %>
-<h3>Content</h3>
-<div id="epiceditor-wrapper"><%= @route.content %></div>
+<div class="markdown"><%= @route.content %></div>
 <script>
 $(document).ready(function() {
   var converter = new Showdown.converter({extensions: ["github"] });
- $("#epiceditor-wrapper").html(converter.makeHtml($("#epiceditor-wrapper").text()))
+  $(".markdown").each(function() {
+    $(this).html(converter.makeHtml($(this).text()));
+  });
 });
 </script>
