@@ -4,4 +4,10 @@
 <h3>Description</h3>
 <%= @route.description %>
 <h3>Content</h3>
-<pre><%= @route.content %></pre>
+<div id="epiceditor-wrapper"><%= @route.content %></div>
+<script>
+$(document).ready(function() {
+  var converter = new Showdown.converter({extensions: ["github"] });
+ $("#epiceditor-wrapper").html(converter.makeHtml($("#epiceditor-wrapper").text()))
+});
+</script>
