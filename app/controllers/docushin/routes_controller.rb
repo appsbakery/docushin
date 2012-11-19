@@ -1,7 +1,7 @@
 class Docushin::RoutesController < ActionController::Base
   layout 'docushin'
   before_filter :load_route_set
-
+  before_filter :restrict_to_development, :only => [:edit, :update]
   def index
   end
 
@@ -22,5 +22,9 @@ class Docushin::RoutesController < ActionController::Base
   private
   def load_route_set
     @routes_collection = Docushin::RouteSet.new
+  end
+
+  def restrict_to_development
+    head(:bad_request) unless Rails.env.development?
   end
 end

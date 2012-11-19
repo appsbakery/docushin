@@ -4,7 +4,9 @@
   <thead>
     <tr>
       <th>Resource</th>
-      <th>Description</th>
+      <% if is_in_dev? %>
+        <th>Description</th>
+      <% end %>
     </tr>
   </thead>
   <tbody>       
@@ -14,11 +16,13 @@
             <span class="label"><%= route.verb %></span> <%= link_to route.path, route_path(:id => generate_name(route.verb, route.path)) %>
           </td>
           <td>
-            <% if file_exists?(route.verb, route.path) %>
-              <%= route.description %>
-              <%= link_to 'Update', edit_route_path(generate_name(route.verb, route.path))%>
-            <% else %>
-              <%= link_to 'Create a description', edit_route_path(generate_name(route.verb, route.path))%>
+            <% if is_in_dev? %>
+              <% if file_exists?(route.verb, route.path) %>
+                <%= route.description %>
+                <%= link_to 'Update', edit_route_path(generate_name(route.verb, route.path))%>
+              <% else %>
+                <%= link_to 'Create a description', edit_route_path(generate_name(route.verb, route.path))%>
+              <% end %>
             <% end %>
           </td>
        </tr>
