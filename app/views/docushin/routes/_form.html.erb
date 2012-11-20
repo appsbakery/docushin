@@ -1,24 +1,90 @@
 <h3 id="title"><%= @route.verb + " " + @route.path %></h3>
 <%= form_for(@route) do |f| %>
-  <table>
-    <tr>
-      <td>
-        <%= f.label :description %>
-      </td>
-      <td>
-        <%= f.text_field :description %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= f.label :content %> 
-      </td>
-      <td>
-        <%= f.text_area(:content, :cols => 50, :rows => 20) %>
-      </td>
-    </tr>
-  </table>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+  <tr>
+    <td>
+      <%= f.label :description %>
+    </td>
+    <td>
+      <%= f.text_field :description %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :content %> 
+    </td>
+    <td>
+      <%= f.text_area(:content, :cols => 50, :rows => 20) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+
+      Docushin parses documents with GitHub Flavored Markdown. Scroll down to read the documentation.
+    </td>
+  </tr>
+</table>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
+<div class="content">
+  <h2>Markdown Cheat Sheet</h2>
+
+  <div class="cheatsheet-content">
+
+  <div class="mod">
+    <div class="col">
+      <h3>Format Text</h3>
+      <p>Headers</p>
+      <pre># This is an &lt;h1&gt; tag
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag</pre>
+     <p>Text styles</p>
+     <pre>*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+</pre>
+    </div>
+    <div class="col">
+      <h3>Lists</h3>
+      <p>Unordered</p>
+      <pre>* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b</pre>
+     <p>Ordered</p>
+     <pre>1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b</pre>
+    </div>
+    <div class="col">
+      <h3>Miscellaneous</h3>
+      <p>Images</p>
+      <pre>![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+</pre>
+     <p>Links</p>
+     <pre>http://github.com - automatic!
+[GitHub](http://github.com)</pre>
+<p>Blockquotes</p>
+     <pre>As Kanye West said:
+
+&gt; We're living the future so
+&gt; the present is our past.
+</pre>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  </div>
+
+  </div><p>
+  <a href="http://github.github.com/github-flavored-markdown/" class="gfm-help" target="_blank">GitHub Flavored Markdown</a></p>
