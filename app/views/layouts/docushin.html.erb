@@ -7,6 +7,15 @@
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/showdown.js"></script>
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/extensions/github.js"></script>
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/extensions/table.js"></script>
+  <script>
+  $(document).ready(function() {
+    var converter = new Showdown.converter({extensions: ["github"] });
+    $(".markdown").each(function() {
+      console.log(this)
+      $(this).html(converter.makeHtml($(this).text()));
+    });
+  });
+  </script>
   <style>
     body { background-color: #fff; color: #333; margin: 0px; }
 
@@ -45,6 +54,7 @@
       font-weight: 200;
       line-height: 38px;
     }
+
     .label {
       display: inline-block;
       padding: 2px 4px;

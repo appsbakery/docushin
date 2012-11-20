@@ -1,12 +1,4 @@
 <h1 id="title"><%= @route.verb + " " + @route.path %></h1>
-<p><pre class="route-url"><%= File.join(request.protocol, request.host, @route.path) %></pre></p>
+<p><pre class="route-url"><%= File.join(request.protocol, request.host_with_port, @route.path) %></pre></p>
 <%= @route.description %>
 <div class="markdown"><%= @route.content %></div>
-<script>
-$(document).ready(function() {
-  var converter = new Showdown.converter({extensions: ["github"] });
-  $(".markdown").each(function() {
-    $(this).html(converter.makeHtml($(this).text()));
-  });
-});
-</script>
