@@ -8,7 +8,7 @@
   end
 
   def collections
-    @content = File.read(File.join(Rails.root, "doc", "docushin", "collections.yml")) rescue nil
+    @content = File.read(File.join(Rails.root, "doc", "docushin", "collections.yml")) rescue []
     @sets = YAML.load(@content)
   end
 
