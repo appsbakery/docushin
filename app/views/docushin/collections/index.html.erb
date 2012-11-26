@@ -1,0 +1,16 @@
+<div class="markdown">
+<% @sets.each do |set| %>
+# <%= set["title"] %>
+<% set["collections"].each do |collection| %>
+## <%= collection["title"] %>
+<% collection["items"].each do |item| %>
+<% if route = @route_set.find_by_filename_hash(item)%>
+`<%= route.verb%>` [<%= route.description%>](<%= route_path(item)%>)
+
+<% else %>
+> Missing route with ID: <%= item %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+</div>

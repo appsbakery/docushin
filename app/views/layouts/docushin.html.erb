@@ -510,9 +510,10 @@
 <body>
   <div id="header-outer">
     <div id="header">
-      <div id="logo"><%= link_to "Docushin", routes_path, :class => "logo" %></div>
+      <div id="logo"><%= link_to "Docushin", root_path, :class => "logo" %></div>
       <ul id="title-nav">
-        <li class="leaf last"><%= link_to "Collections", collections_routes_path %></li>
+	<li class="leaf"><%= link_to "Routes", routes_path %></li>
+        <li class="leaf last"><%= link_to "Collections", collections_path %></li>
       </ul>
     </div>
   </div>

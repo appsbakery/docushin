@@ -7,11 +7,6 @@
   def index
   end
 
-  def collections
-    @content = File.read(File.join(Rails.root, "doc", "docushin", "collections.yml")) rescue []
-    @sets = YAML.load(@content)
-  end
-
   def show
     @route = @route_set.find_by_filename_hash(params[:id])
   end
