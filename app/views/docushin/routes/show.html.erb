@@ -2,3 +2,4 @@
 <p><pre class="route-url"><%= File.join(request.protocol, request.host_with_port, @route.path) %></pre></p>
 <%= @route.description %>
 <div class="markdown"><%= @route.content %></div>
+<h4>This document has been updated at: <%= Time.at(@route.updated_at).strftime('%H:%M:%S, %A %d, %B') %></h4>

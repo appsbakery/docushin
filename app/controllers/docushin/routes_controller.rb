@@ -8,15 +8,15 @@
   end
 
   def show
-    @route = @route_set.find_by_filename_hash(params[:id])
+    @route = @route_set.find(params[:id])
   end
 
   def edit
-    @route = @route_set.find_by_filename_hash(params[:id])
+    @route = @route_set.find(params[:id])
   end
 
   def update
-    @route = @route_set.find_by_filename_hash(params[:id])
+    @route = @route_set.find(params[:id])
     @route.update_attributes(params[:route])
     redirect_to routes_path
   end

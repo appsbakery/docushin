@@ -1,1 +1,25 @@
-<div class="markdown"><%= @index %></div>
+<% unless @routes.empty? %>
+  <div>
+    <h3>Recent updates</h3>
+    <table>
+      <thead>
+	<tr>
+	  <th>Resource</th>
+	  <th>Updated at</th>
+	</tr>
+      </thead>
+      <tbody>
+	<% @routes.each do |item|%>
+	  <tr>
+	    <td>
+	      <%= link_to item.verb + " " + item.path, route_path(:id => generate_name(item.verb, item.path)) %>
+	    </td>
+	    <td>
+	      <%= time_ago_in_words(Time.at(item.updated_at))%> ago
+	    </td>
+	  </tr>
+	<% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

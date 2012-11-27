@@ -1,7 +1,7 @@
 module Docushin
   class RouteSet
     attr_accessor :routes
-    
+
     def initialize
       @routes = []
       Rails.application.routes.routes.each do |route|
@@ -14,11 +14,11 @@ module Docushin
             add_route Route.new(rack_route)
           end
         end
-        
+
         add_route Route.new(route)
       end
     end
-    
+
     def add_route(route)
       if Docushin.path_regexp.nil?
         @routes << route
@@ -36,7 +36,7 @@ module Docushin
       end
     end
 
-    def find_by_filename_hash(hash)
+    def find(hash)
       @routes.each do |route|
         return route if route.file_name == "#{hash}"
       end

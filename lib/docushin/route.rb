@@ -34,6 +34,10 @@ module Docushin
       @data["description"]
     end
 
+    def updated_at
+      File.mtime(File.join(@base,"#{@file_name}.md")).to_i
+    end
+
     # Updates the attributes of the model from the passed-in hash
     # and saves the route
     def update_attributes(attributes)
@@ -53,7 +57,6 @@ module Docushin
     # If the route is new, a document gets created in the doc folder, otherwise
     # the existing document gets updated.
     def save
-      @data["updated_at"] = DateTime.now.to_i
       FileUtils.mkdir_p(@base) unless File.exists?(@base)
       File.open(File.join(@base,"#{@file_name}.md"), "w+") do |file|
         file.write @data.to_yaml
@@ -78,7 +81,6 @@ module Docushin
       rescue => e
         # Do nothing
       end
-
       @data ||= {}
     end
   end
