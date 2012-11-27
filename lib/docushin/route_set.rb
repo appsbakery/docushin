@@ -38,8 +38,9 @@ module Docushin
 
     def find(hash)
       @routes.each do |route|
-        return route if route.file_name == "#{hash}"
+        return route if route.id == hash
       end
+      nil
     end
   end
 end

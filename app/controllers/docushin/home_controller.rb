@@ -7,7 +7,9 @@ class Docushin::HomeController < ActionController::Base
     @routes = []
     @routes_set = Docushin::RouteSet.new
     @documents = Dir["#{File.join(Rails.root, "doc/docushin")}/*.md"]
-    @documents.collect {|r| @routes << @routes_set.find(File.basename(r, ".md"))}
-    @routes.sort_by!(&:updated_at).reverse!.take(10)
+    @documents.each do |file|
+      @routes << @routes_set.find(File.basename(file, ".md"))
+    end
+    @routes.compact!.sort_by!(&:updated_at).reverse!.take(10)
   end
 end

@@ -3,4 +3,6 @@
 <%= @route.description %>
 <div class="markdown"><%= @route.content %></div>
 <%= button_to  "Update", edit_route_path(generate_name(@route.verb, @route.path)), :method => :get %>
+<% if @route.updated_at %>
 <h4>This document has been updated at: <%= Time.at(@route.updated_at).strftime('%H:%M:%S, %A %d, %B') %></h4>
+<% end %>

@@ -4,7 +4,7 @@
 <% set["collections"].each do |collection| %>
 ## <%= collection["title"] %>
 <% collection["items"].each do |item| %>
-<% if route = @route_set.find_by_filename_hash(item)%>
+<% if route = @route_set.find(item)%>
 `<%= route.verb%>` [<%= route.description%>](<%= route_path(item)%>)
 
 <% else %>
