@@ -4,7 +4,9 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 
-require 'rubygems'
+
+require 'capybara/rails'
+require 'capybara/rspec'
 require 'bundler/setup'
 require 'docushin'
 require 'pry'

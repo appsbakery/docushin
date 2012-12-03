@@ -33,7 +33,6 @@ describe Docushin::Route do
 
   describe 'read markdown file' do
     it 'should generate data and content' do
-      route.data.should == {"description"=>"I am so awesome", "updated_at"=>"2012-11-27 08:13:43 UTC"}
       route.description.should == "I am so awesome"
       route.content.should == "{\"id\":\"4f3a296ac8de6732fe000003\",\"first_name\":\"Todor\",\"last_name\":\"Grudev\",\"gender\":\"male\",\"email\":\"tagrudev@gmail.com\"}\n"
     end
