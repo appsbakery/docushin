@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["tagrudev@gmail.com", "aganov@gmail.com"]
   gem.description   = %q{Builds documentation based on your Ruby on Rails application routes.}
   gem.summary       = %q{Useful for generating docs on your routes.}
-  gem.homepage    = "http://github.com/appsbakery/docushin"
+  gem.homepage    = "http://appsbakery.github.com/docushin/"
 
 
   gem.files         = `git ls-files`.split($\)
