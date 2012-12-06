@@ -76,7 +76,7 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
+  color:#307AEF;
   font-weight:200;
   text-decoration:none;
 }
@@ -304,7 +304,6 @@ a.buttons:hover {
 section {
   width:650px;
   float:right;
-  padding-bottom:50px;
 }
 
 

@@ -30,9 +30,43 @@
 
       </header>
       <section>
+        <h3>What is Docushin and how to use it?</h3>
+	Docushin creates documentation for your routes. It allows you to mount it on a path of your choice.
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'docushin'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Mount engine in your application <code>config/routes.rb</code></p>
+
+<pre><code>mount Docushin::Engine, :at =&gt; "docushin"
+</code></pre>
+
+<p>You can specify, the name of the route you want Docushin to be mountet at, just change "docushin"
+to your desired destination. It creates a resource on <code>http://yousitename/docushin</code>.</p>
+
+      </section>
+      <section>
+        <h3>Contributing</h3>
+	<ol>
+	  <li>Fork it</li>
+	  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+	  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+	  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+	  <li>Create new Pull Request</li>
+	</ol>
+      </section>
+      <section>
         <h3>Authors and Contributors</h3>
 
-<p>Todor Grudev
+<p>Todor Grudev <br />
+
 Alex Ganov</p>
       </section>
       <footer>
@@ -40,6 +74,6 @@ Alex Ganov</p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
   </body>
 </html>
