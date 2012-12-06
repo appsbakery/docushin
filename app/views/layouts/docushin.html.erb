@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <title>Routes</title>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/showdown.js"></script>
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/extensions/github.js"></script>
   <script src="https://raw.github.com/coreyti/showdown/v0.3.1/src/extensions/table.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://raw.github.com/rails/jquery-ujs/master/src/rails.js"></script>
   <script>
   $(document).ready(function() {
     var converter = new Showdown.converter({extensions: ["github"] });
@@ -23,6 +27,16 @@
       font-family: helvetica, verdana, arial, sans-serif;
       font-size:   13px;
       line-height: 18px;
+    }
+    ul.droptrue {
+      list-style-type:none;
+      float: left;
+    }
+    ul.droptrue.container{
+      min-height: 250px;
+      min-width: 350px;
+      background: white;
+      border: 1px solid gray;
     }
     #container {
       width: 960px;
@@ -87,6 +101,21 @@
       font-weight: 300;
       line-height: 1.1;
       margin-bottom: 0.75em;
+    }
+    p.collection_title{
+      border-bottom:1px solid #ccc;
+    }
+    span.collection_title{
+      font-size:24px;
+      color:#000;
+    }
+    span.verb{
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #EAEAEA;
+      background-color: #F8F8F8;
+      border-radius: 3px;
     }
     table {
       margin: 0 0 3em 0;

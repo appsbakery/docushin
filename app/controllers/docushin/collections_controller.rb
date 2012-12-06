@@ -1,9 +1,50 @@
+# -*- coding: utf-8 -*-
 class Docushin::CollectionsController < ActionController::Base
   layout 'docushin'
+  before_filter :authorize_resource, :only => [:edit, :update, :destroy]
+  before_filter :set_default_base_path
 
   def index
     @route_set = Docushin::RouteSet.new
-    @content = File.read(File.join(Rails.root, "doc", "docushin", "collections.yml")) rescue nil
-    @sets = @content.nil? ? [] : YAML.load(@content)
+    @content = YAML.load_documents(File.open(File.join(Rails.root, "doc", "docushin", "collections.yml"))) rescue nil
+    @sets = @content.nil? ? [] : @content
+  end
+
+  def show
+  end
+
+  def new
+    @route_set = Docushin::RouteSet.new
+  end
+
+  def destroy
+    @content = YAML.load_documents(File.open(File.join(Rails.root, "doc", "docushin", "collections.yml"))) rescue nil
+    @content.reject! {|obj| obj[:id] == params[:id]}
+    File.open(File.join(set_default_base_path,"collections.yml"), "w") do |file|
+      @content.each do|item|
+        file.write item.to_yaml
+      end
+      file.close
+    end
+    redirect_to collections_path
+  end
+
+  def create
+    params[:title] =  params[:title].blank? ? "Default Title" : params[:title]
+    @data = {:id => Digest::MD5.hexdigest(DateTime.now.to_s), :title => params[:title], :route_set_ids => params[:route_set_ids] }
+    FileUtils.mkdir_p(set_default_base_path) unless File.exists?(set_default_base_path)
+    File.open(File.join(set_default_base_path,"collections.yml"), "a+") do |file|
+      file.write @data.to_yaml
+      file.close
+    end
+  end
+
+  private
+  def authorize_resource
+    render :text => "Unauthorized" unless Rails.env.development?
+  end
+
+  def set_default_base_path
+    File.join(Rails.root, 'doc', 'docushin')
   end
 end

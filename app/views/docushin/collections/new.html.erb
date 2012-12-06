@@ -1,0 +1,50 @@
+    <script>
+    $(document).ready(function(){
+      $( "ul.droptrue" ).sortable({
+        connectWith: "ul"
+      });
+      $( "#sortable, #sortable_container" ).disableSelection();
+      $('#create_collection').submit(function(e){
+        e.preventDefault();
+        var route_set_ids = new Array();
+        $.each($('#sortable_container li'), function(key, item){
+          route_set_ids.push($(item).attr("id"));
+        });
+        $.post($(this).attr('action'), { route_set_ids: route_set_ids, title: $('#title').val() },
+          function(data) {
+            window.location.replace(window.location.href.replace("/new", ""));
+        });
+      });
+    });
+    </script>
+<h2>Create a new collection</h2>
+<%= form_tag collections_path, :id => "create_collection" do %>
+<table>
+  <tr>
+    <td>
+      Title:
+    </td>
+    <td>
+      <%= text_field_tag :title %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <ul id="sortable" class="droptrue">
+	<% @route_set.routes.each do |route| %>
+	  <li class="ui-state-highlight" id="<%= route.id %>">
+	    <span class="label"><%= route.verb %></span> <%= link_to route.path, route_path(:id => generate_name(route.verb, route.path)) %>
+	  </li>
+	<% end %>
+      </ul>
+      <ul id="sortable_container" class="droptrue container">
+      </ul>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+<div class="actions">
+  <%= submit_tag %>
+</div>
+<% end %>

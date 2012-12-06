@@ -1,36 +1,12 @@
-- title: Users
-  collections:
-  - title: Register and Login
-    items:
-    - 99f76f3a9e483e5f5dd6f4f8a1d117d8
-    - d489b97777d5a9b4ad3925d0817f479e
-    - 065ac9467846999e63c706bdfbf8287b
-    - 1ad47c524518266e3fa56aafec813327
-    - 4d8b7649ea969e54aa6287764405324c
-    - 61665c753d97ee1cb228b3ebb98b5398
-  - title: Friendships
-    items:
-    - 5f53665a03d3d2bdb495fb7c4a306334
-    - 7595b6fc281533567a866a329406c27d
-    - 139ab174a2d1b3688f6cc50e3ebd9425
-    - 131d87ba64f4658e0ce91d98bd350bbe
-    - 49ac8914a763125a4698e366870c4473
-    - 9eda6d0aa83fd717e1fabd2fb9fe4ca4
-- title: Places
-  collections:
-  - title: Place's data
-    items:
-    - 56d72f0b4607ea60a184d09f3eb82c15
-    - 6c687830f7f18fe95de26180610de276
-    - eeb6902503c34786df4ad5f4fc9312cf
-    - 9b7eb8e5f070dc5abd4150430d141879
-    - 61208591334fe9c0c18373d1253f50fb
-  - title: Followings
-    items:
-    - 1bef07deab0a862241ae2d818e3cba8e
-    - cb03d09e00d0ec487a93c089415a4d3b
-    - a68783e390edbfa6d5982b6309fd9b6a
-  - title: Checkins
-    items:
-    - de3e1f5bf10fea4a6082fea3d52846df
-    - a2575381de7a35bbebea9b75b100ba64
+---
+:id: !binary |-
+  YTljYTNiN2VmMmE1MjBlZDllYWYzZjMzMmI4NDUyMWQ=
+:title: A
+:route_set_ids:
+-
+---
+:id: !binary |-
+  NjBiODkzMzE0MDhhNTUzMWZjNDhhMTYxY2Y2MzE1YzE=
+:title: Default Title
+:route_set_ids:
+-
