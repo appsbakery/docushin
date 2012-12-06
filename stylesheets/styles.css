@@ -269,12 +269,15 @@ header li {
   background: -ms-linear-gradient(top, #00A0D1 0%,#307AEF 100%);
   background: linear-gradient(top, #00A0D1 0%,#307AEF 100%);
 
+	border-radius:4px;
+
 
 }
 
 header li:hover {
 	background: #307AEF;
 	background: -moz-linear-gradient(top, #307AEF 0%, #307AEF100%);
+
 }
 
 a.buttons {
