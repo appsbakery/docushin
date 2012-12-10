@@ -1,9 +1,9 @@
+<h3>Application Routes</h3>
 <% @route_set.routes.group_by{ |r| r.controller }.each do |controller, routes| %>
-<h2><%= controller.titleize.gsub("/", "::") %></h2>
 <table>
   <thead>
     <tr>
-      <th>Resource</th>
+      <th><%= controller.titleize.gsub("/", "::") %></th>
       <th>Description</th>
     </tr>
   </thead>
@@ -11,14 +11,13 @@
     <% routes.each do |route|%>
        <tr>
           <td class="resource">
-            <span class="label"><%= route.verb %></span> <%= link_to route.path, route_path(:id => generate_name(route.verb, route.path)) %>
+            <%= link_to "#{route.verb} #{route.path}", route_path(:id => generate_name(route.verb, route.path)) %>
           </td>
           <td>
             <% if file_exists?(route.verb, route.path) %>
               <%= route.description %>
               <%= link_to 'Update', edit_route_path(generate_name(route.verb, route.path)) if is_in_dev?%>
             <% else %>
-              No description yet.
               <%= link_to 'Create a description', edit_route_path(generate_name(route.verb, route.path))  if is_in_dev?%>
             <% end %>
           </td>

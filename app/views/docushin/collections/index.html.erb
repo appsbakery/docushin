@@ -1,27 +1,22 @@
-<% if @sets.empty? %>
+<% if @collections.empty? %>
   <h2> You haven't created collections yet. </h2>
 <% else %>
-  <% @sets.each do |collection| %>
-    <p class="collection_title">
-      <span class="collection_title"><%= collection[:title] %></span>
-      <%= link_to "Delete this collection", collection_path(collection[:id]), :method=> :delete %>
-    </p>
-    <table>
-      <% collection[:route_set_ids].each do |item| %>
-	<tr>
-	  <p>
-	    <% if route = @route_set.find(item)%>
-	      <td width="15%"><span class="verb"><%= route.verb%></span></td><td><%= link_to route.description.blank? ? 'Add description?' : route.description, route_path(item) %></td>
-	    <% else %>
-	      > Missing route with ID: <%= item %>
-	    <% end %>
-	  </p>
-	</tr>
-      <% end %>
-    </table>
+  <% @collections.each do |collection| %>
+  <table>
+  <tr><th><%= collection[:title]%> <span><%= link_to("x", collection_path(collection[:id]), :method => :delete) %></span></th></tr>
+  <% collection[:route_set_ids].each do |item| %>
+  	<tr>
+  	  <p>
+  	    <% if route = @route_set.find(item)%>
+  	      <td><%= link_to "#{route.description}", route_path(item), :title => "#{route.verb} #{route.path}" %></td>
+  	    <% else %>
+  	      Missing route with ID: <%= item %>
+  	    <% end %>
+  	  </p>
+  	</tr>
+  <% end %>
+  </table>
   <% end %>
 <% end %>
 
-<p>
 <%= link_to "Create a new Collection", new_collection_path%>
-</p>

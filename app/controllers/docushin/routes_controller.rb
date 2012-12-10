@@ -1,32 +1,23 @@
- class Docushin::RoutesController < ActionController::Base
-  layout 'docushin'
+module Docushin
+  class RoutesController < ApplicationController
+    before_filter :load_route_set
+    before_filter :authorize!, :only => [:edit, :update]
 
-  before_filter :load_resource
-  before_filter :authorize_resource, :only => [:edit, :update]
+    def index
+    end
 
-  def index
-  end
+    def show
+      @route = @route_set.find(params[:id])
+    end
 
-  def show
-    @route = @route_set.find(params[:id])
-  end
+    def edit
+      @route = @route_set.find(params[:id])
+    end
 
-  def edit
-    @route = @route_set.find(params[:id])
-  end
-
-  def update
-    @route = @route_set.find(params[:id])
-    @route.update_attributes(params[:route])
-    redirect_to routes_path
-  end
-
-  private
-  def load_resource
-    @route_set = Docushin::RouteSet.new
-  end
-
-  def authorize_resource
-    render :text => "Unauthorized" unless Rails.env.development?
+    def update
+      @route = @route_set.find(params[:id])
+      @route.update_attributes(params[:route])
+      redirect_to routes_path
+    end
   end
 end

@@ -1,13 +1,12 @@
-class Docushin::HomeController < ActionController::Base
-  layout 'docushin'
+module Docushin
+  class HomeController < Docushin::ApplicationController
+    before_filter :load_route_set
 
-  def index
-    #get all the .md files(routes)
-    #get their basename and return routes arranged
-    @routes_set = Docushin::RouteSet.new
-    @routes = Dir["#{File.join(Rails.root, "doc/docushin")}/*.md"].collect do |file|
-      @routes_set.find(File.basename(file, ".md"))
+    def index
+      @routes = Dir["#{File.join(Rails.root, "doc/docushin")}/*.md"].collect do |file|
+        @route_set.find(File.basename(file, ".md"))
+      end
+      @routes = @routes.compact.sort_by(&:updated_at).reverse.take(10)
     end
-    @routes = @routes.compact.sort_by(&:updated_at).reverse.take(10)
   end
 end

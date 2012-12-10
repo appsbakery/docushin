@@ -1,22 +1,25 @@
-    <script>
-    $(document).ready(function(){
-      $( "ul.droptrue" ).sortable({
-        connectWith: "ul"
-      });
-      $( "#sortable, #sortable_container" ).disableSelection();
-      $('#create_collection').submit(function(e){
-        e.preventDefault();
-        var route_set_ids = new Array();
-        $.each($('#sortable_container li'), function(key, item){
-          route_set_ids.push($(item).attr("id"));
-        });
-        $.post($(this).attr('action'), { route_set_ids: route_set_ids, title: $('#title').val() },
-          function(data) {
-            window.location.replace(window.location.href.replace("/new", ""));
-        });
-      });
+<script type="text/javascript">
+$(document).ready(function() {
+  $("ul.droptrue").sortable({
+    connectWith: "ul"
+  });
+  $("#sortable, #sortable_container").disableSelection();
+  return $("#create_collection").submit(function(e) {
+    e.preventDefault();
+    var routeSetIds = new Array();
+    $.each($("#sortable_container li"), function(key, item) {
+      return routeSetIds.push($(item).attr("id"));
     });
-    </script>
+    return $.post($(this).attr("action"), {
+      routeSetIds: routeSetIds,
+      title: $("#title").val()
+    }, function(data) {
+      return window.location.replace(window.location.href.replace("/new", ""));
+    });
+  });
+});
+
+</script>
 <h2>Create a new collection</h2>
 <%= form_tag collections_path, :id => "create_collection" do %>
 <table>
