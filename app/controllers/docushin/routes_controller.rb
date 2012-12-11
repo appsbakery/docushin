@@ -1,5 +1,5 @@
 module Docushin
-  class RoutesController < ApplicationController
+  class RoutesController < Docushin::ApplicationController
     before_filter :load_route_set
     before_filter :authorize!, :only => [:edit, :update]
 

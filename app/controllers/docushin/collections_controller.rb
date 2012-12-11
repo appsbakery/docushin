@@ -1,5 +1,5 @@
 module Docushin
-  class CollectionsController < ApplicationController
+  class CollectionsController < Docushin::ApplicationController
     before_filter :authorize!, :only => [:edit, :update, :destroy]
     before_filter :set_default_base_path, :load_route_set
 
