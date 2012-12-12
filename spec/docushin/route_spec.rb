@@ -43,4 +43,10 @@ describe Docushin::Route do
       route.updated_at.should == File.mtime(File.join(route.base, "#{route.file_name}.md")).to_i
     end
   end
+
+  describe 'check if route is saved' do
+    it 'should return true if the file/route exists' do
+      route.saved?.should == true
+    end
+  end
 end

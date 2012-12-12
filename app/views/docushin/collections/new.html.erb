@@ -11,14 +11,13 @@ $(document).ready(function() {
       return routeSetIds.push($(item).attr("id"));
     });
     return $.post($(this).attr("action"), {
-      routeSetIds: routeSetIds,
+      route_set_ids: routeSetIds,
       title: $("#title").val()
     }, function(data) {
       return window.location.replace(window.location.href.replace("/new", ""));
     });
   });
 });
-
 </script>
 <h2>Create a new collection</h2>
 <%= form_tag collections_path, :id => "create_collection" do %>

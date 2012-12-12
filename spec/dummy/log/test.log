@@ -227,3 +227,183 @@ Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-06 10:24:09 +0200
 Processing by Docushin::RoutesController#index as HTML
   Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.8ms)
 Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:31:58 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (8863.5ms)
+Completed 500 Internal Server Error in 8936ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:32:07 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (24.7ms)
+Completed 200 OK in 33ms (Views: 27.8ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:32:07 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.5ms)
+Completed 200 OK in 11ms (Views: 5.7ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:34:09 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (30.1ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:34:09 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:34:09 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:34:14 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (29.9ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:34:14 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:34:14 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 6.0ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:34:24 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (30.0ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:34:24 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:34:24 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:34:40 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (29.9ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:34:40 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.5ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:34:40 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.5ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:43:22 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (29.8ms)
+Completed 500 Internal Server Error in 68ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:43:22 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.5ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:43:23 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:43:27 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (29.9ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:43:27 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.5ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:43:28 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.5ms)
+Completed 200 OK in 11ms (Views: 5.7ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:53:10 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (29.6ms)
+Completed 500 Internal Server Error in 68ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:53:10 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.5ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:53:10 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:53:34 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (30.0ms)
+Completed 500 Internal Server Error in 69ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:53:34 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.4ms)
+Completed 200 OK in 13ms (Views: 7.5ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:53:34 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.9ms)
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:54:05 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (6.8ms)
+Completed 200 OK in 47ms (Views: 41.1ms)
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:54:10 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (0.5ms)
+Completed 200 OK in 7ms (Views: 1.6ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:54:18 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (6.5ms)
+Completed 500 Internal Server Error in 40ms
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:58:56 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (7.9ms)
+Completed 500 Internal Server Error in 14ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:58:56 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (0.6ms)
+Completed 200 OK in 35ms (Views: 1.7ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:58:56 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.9ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:59:03 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (36.3ms)
+Completed 500 Internal Server Error in 75ms
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 10:59:39 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (7.8ms)
+Completed 500 Internal Server Error in 14ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 10:59:39 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.5ms)
+Completed 200 OK in 13ms (Views: 7.7ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 10:59:39 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 6.1ms)
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 11:00:42 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (6.7ms)
+Completed 200 OK in 47ms (Views: 41.3ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 11:00:42 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 11:01:09 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (36.4ms)
+Completed 500 Internal Server Error in 75ms
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 11:01:09 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.5ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 11:01:09 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)
+Started GET "/docushin/collections" for 127.0.0.1 at 2012-12-12 11:03:35 +0200
+Processing by Docushin::CollectionsController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/collections/index.html.erb within layouts/docushin (3.7ms)
+Completed 200 OK in 44ms (Views: 38.0ms)
+Started GET "/docushin" for 127.0.0.1 at 2012-12-12 11:03:35 +0200
+Processing by Docushin::HomeController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/home/index.html.erb within layouts/docushin (4.3ms)
+Completed 200 OK in 12ms (Views: 6.6ms)
+Started GET "/docushin/routes" for 127.0.0.1 at 2012-12-12 11:03:35 +0200
+Processing by Docushin::RoutesController#index as HTML
+  Rendered /var/www/private/docushin/app/views/docushin/routes/index.html.erb within layouts/docushin (3.6ms)
+Completed 200 OK in 11ms (Views: 5.8ms)

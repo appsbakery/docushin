@@ -2,20 +2,21 @@
   <h2> You haven't created collections yet. </h2>
 <% else %>
   <% @collections.each do |collection| %>
-  <table>
-  <tr><th><%= collection[:title]%> <span><%= link_to("x", collection_path(collection[:id]), :method => :delete) %></span></th></tr>
-  <% collection[:route_set_ids].each do |item| %>
+    <table>
+      <tr><th><%= collection[:title]%> <span><%= link_to("x", collection_path(collection[:id]), :method => :delete) %></span></th></tr>
+      <% collection[:route_set_ids].each do |item| %>
   	<tr>
   	  <p>
-  	    <% if route = @route_set.find(item)%>
+	    <% route = @route_set.find(item) %>
+  	    <% if route.saved? %>
   	      <td><%= link_to "#{route.description}", route_path(item), :title => "#{route.verb} #{route.path}" %></td>
   	    <% else %>
-  	      Missing route with ID: <%= item %>
+  	      <td><%= link_to "Add description to #{route.path}", route_path(item) %></td>
   	    <% end %>
   	  </p>
   	</tr>
-  <% end %>
-  </table>
+      <% end %>
+    </table>
   <% end %>
 <% end %>
 

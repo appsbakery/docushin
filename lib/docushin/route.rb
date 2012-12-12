@@ -67,6 +67,11 @@ module Docushin
       end
     end
 
+    # Return true if file/route is saved
+    def saved?
+      File.exists?(File.join(@base, "#{@file_name}.md")) ? true : false
+    end
+
     def persisted?
       true
     end
