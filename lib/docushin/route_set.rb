@@ -12,7 +12,7 @@ module Docushin
         if (rack_app = discover_rack_app(route.app)) && rack_app.respond_to?(:routes)
           rack_app.routes.routes.each do |rack_route|
             add_route Route.new(rack_route)
-          end
+          end if rack_app.routes.respond_to?(:routes)
         end
 
         add_route Route.new(route)
